@@ -1,0 +1,18 @@
+if TARGET_RZG2L_VERSA
+
+config SYS_SOC
+	default "rmobile"
+
+config SYS_BOARD
+	default "rzg2l-versa"
+
+config SYS_VENDOR
+	default "calixto"
+
+config SYS_CONFIG_NAME
+	default "rzg2l-versa"
+
+endif
+
+
+

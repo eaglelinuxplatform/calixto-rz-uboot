@@ -1,0 +1,18 @@
+if TARGET_RZG2L_OPTIMA
+
+config SYS_SOC
+	default "rmobile"
+
+config SYS_BOARD
+	default "rzg2l-optima"
+
+config SYS_VENDOR
+	default "calixto"
+
+config SYS_CONFIG_NAME
+	default "rzg2l-optima"
+
+endif
+
+
+
