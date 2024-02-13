@@ -252,6 +252,17 @@ source "board/renesas/rzg2ul-dev/Kconfig"
 source "board/calixto/rzg2l-versa/Kconfig"
 source "board/calixto/rzg2l-optima/Kconfig"
 
+config CALIXTO_DDR4_1GB
+	bool "1GB DDR4 Memory"
+	default no
+	help
+	 Enabling this will indicate that system has 1GB DDR4 memory.
+	 
+config CALIXTO_DDR4_2GB
+	bool "2GB DDR4 Memory"
+	default no
+	help
+	 Enabling this will indicate that system has 2GB DDR4 memory.
 
 config MULTI_DTB_FIT_UNCOMPRESS_SZ
 	default 0x80000 if TARGET_HIHOPE_RZG2

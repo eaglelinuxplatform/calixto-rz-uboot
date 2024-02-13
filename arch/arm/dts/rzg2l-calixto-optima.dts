@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: GPL-2.0
 /*
- * Device Tree Source for the GR-Peach board
+ * Device Tree Source for the EVB board
  *
  * CALIXTO SYSTEMS PVT LTD
  */
@@ -12,7 +12,7 @@
 #include <dt-bindings/pinctrl/rzg2l-pinctrl.h>
 
 / {
-	model = "rzg2l-calixto-versa-2GB";
+	model = "rzg2l-calixto-optima";
 	compatible = "renesas,r9a07g044l", "renesas,rzg2l";
 
 	aliases {
@@ -24,12 +24,21 @@
 		stdout-path = "serial0:115200n8";
 	};
 
-	memory@48000000 {
-		device_type = "memory";
-		/* first 128MB is reserved for secure area. */
-		reg = <0 0x48000000 0 0x78000000>;
-	};
+#ifdef CONFIG_CALIXTO_DDR4_1GB
+        memory@48000000 {
+                device_type = "memory";
+                /* first 128MB is reserved for secure area. */
+                reg = <0 0x48000000 0 0x58000000>;
+        };
+#endif
 
+#ifdef CONFIG_CALIXTO_DDR4_2GB
+        memory@48000000 {
+                device_type = "memory";
+                /* first 128MB is reserved for secure area. */
+                reg = <0 0x48000000 0 0x78000000>;
+        };
+#endif
 
 };
 
@@ -101,7 +110,6 @@
 		reg = <7>;
 	};
 };
-
 
 &spibsc {
 	num-cs = <1>;
