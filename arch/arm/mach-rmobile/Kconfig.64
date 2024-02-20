@@ -229,6 +229,14 @@ config TARGET_RZG2L_OPTIMA
         bool "RZG2L Optima SOM"
         help
           Support for Calixto's RZG2L Optima SOM
+config TARGET_RZV2L_OPTIMA
+        bool "RZV2L Optima SOM"
+        help
+          Support for Calixto's RZV2L Optima SOM
+config TARGET_RZV2L_VERSA
+        bool "RZV2L Versa SOM"
+        help
+          Support for Calixto's RZV2L Versa SOM
 
 endchoice
 
@@ -251,6 +259,10 @@ source "board/renesas/rzg2lc-dev/Kconfig"
 source "board/renesas/rzg2ul-dev/Kconfig"
 source "board/calixto/rzg2l-versa/Kconfig"
 source "board/calixto/rzg2l-optima/Kconfig"
+source "board/calixto/rzv2l-optima/Kconfig"
+source "board/calixto/rzv2l-versa/Kconfig"
+
+
 
 config CALIXTO_DDR4_1GB
 	bool "1GB DDR4 Memory"

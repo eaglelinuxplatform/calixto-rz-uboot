@@ -1,10 +1,10 @@
 /* SPDX-License-Identifier: GPL-2.0+ */
 /*
- * CALIXTO SYSTEMS PVT LTD
+ * Copyright (C) 2021 CALIXTO SYSTEMS PVT LTD
  */
 
-#ifndef __RZG2L_OPTIMA_H
-#define __RZG2L_OPTIMA_H
+#ifndef __RZV2L_VERSA_H
+#define __RZV2L_VERSA_H
 
 #include <asm/arch/rmobile.h>
 
@@ -21,7 +21,7 @@
 #define CONFIG_INITRD_TAG
 
 /* Generic Interrupt Controller Definitions */
-/* RZ/G2L use GIC-v3 */
+/* RZ/V2L use GIC-v3 */
 #define CONFIG_GICV3
 #define GICD_BASE	0x11900000
 #define GICR_BASE	0x11960000
@@ -65,8 +65,8 @@
 	"prodsdbootargs=setenv bootargs rw rootwait earlycon root=/dev/mmcblk1p1 \0" \
 	"prodemmcbootargs=setenv bootargs rw rootwait earlycon root=/dev/mmcblk0p1 \0" \
 	"bootimage=unzip 0x4A080000 0x48080000; booti 0x48080000 - 0x48000000 \0" \
-	"emmcload=ext4load mmc 0:1 0x48080000 boot/Image;ext4load mmc 0:1 0x48000000 boot/rzg2l-calixto-optima.dtb;run prodemmcbootargs \0" \
-	"sd1load=ext4load mmc 1:1 0x48080000 boot/Image;ext4load mmc 1:1 0x48000000 boot/rzg2l-calixto-optima.dtb;run prodsdbootargs \0" \
+	"emmcload=ext4load mmc 0:1 0x48080000 boot/Image;ext4load mmc 0:1 0x48000000 boot/rzv2l-calixto-versa.dtb;run prodemmcbootargs \0" \
+	"sd1load=ext4load mmc 1:1 0x48080000 boot/Image;ext4load mmc 1:1 0x48000000 boot/rzv2l-calixto-versa.dtb;run prodsdbootargs \0" \
 	"bootcmd_check=if mmc dev 1; then run sd1load; else run emmcload; fi \0"
 
 #define CONFIG_BOOTCOMMAND	"run bootcmd_check;run bootimage"
@@ -75,4 +75,4 @@
 /* Ethernet RAVB */
 #define CONFIG_BITBANGMII_MULTI
 
-#endif /* __RZG2L_OPTIMA_H */
+#endif /*__RZV2L_VERSA_H */
