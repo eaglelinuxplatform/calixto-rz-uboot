@@ -935,7 +935,8 @@ dtb-$(CONFIG_RCAR_GEN3) += \
         rzg2l-calixto-versa.dtb \
         rzg2l-calixto-optima.dtb \
         rzv2l-calixto-optima.dtb \
-        rzv2l-calixto-versa.dtb
+        rzv2l-calixto-versa.dtb \
+	rzg2ul-calixto-tiny.dtb
  
 
 ifdef CONFIG_RCAR_GEN3

@@ -238,6 +238,11 @@ config TARGET_RZV2L_VERSA
         help
           Support for Calixto's RZV2L Versa SOM
 
+config TARGET_RZG2UL_TINY
+        bool "RZG2UL Tiny SOM"
+        help
+          Support for Calixto's RZG2UL Tiny SOM
+
 endchoice
 
 config SYS_SOC
@@ -261,7 +266,7 @@ source "board/calixto/rzg2l-versa/Kconfig"
 source "board/calixto/rzg2l-optima/Kconfig"
 source "board/calixto/rzv2l-optima/Kconfig"
 source "board/calixto/rzv2l-versa/Kconfig"
-
+source "board/calixto/rzg2ul-tiny/Kconfig"
 
 
 config CALIXTO_DDR4_1GB
@@ -275,6 +280,25 @@ config CALIXTO_DDR4_2GB
 	default no
 	help
 	 Enabling this will indicate that system has 2GB DDR4 memory.
+
+config CALIXTO_DDR3L_512MB
+	bool "512MB DDR3L Memory"
+	default no
+	help
+	 Enabling this will indicate that system has 512MB DDR3L memory.
+
+config CALIXTO_DDR4_256MB
+	bool "256MB DDR3L Memory"
+	default no
+	help
+	 Enabling this will indicate that system has 256MB DDR3L memory.
+
+config CALIXTO_DDR3L_1GB
+	bool "2GB DDR4 Memory"
+	default no
+	help
+	 Enabling this will indicate that system has 1GB DDR3L memory.
+
 
 config MULTI_DTB_FIT_UNCOMPRESS_SZ
 	default 0x80000 if TARGET_HIHOPE_RZG2

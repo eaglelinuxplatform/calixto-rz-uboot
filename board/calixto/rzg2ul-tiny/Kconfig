@@ -1,0 +1,15 @@
+if  TARGET_RZG2UL_TINY
+
+config SYS_SOC
+	default "rmobile"
+
+config SYS_BOARD
+	default "rzg2ul-tiny"
+
+config SYS_VENDOR
+	default "calixto"
+
+config SYS_CONFIG_NAME
+	default "rzg2ul-tiny"
+
+endif
