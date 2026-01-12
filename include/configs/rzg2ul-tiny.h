@@ -74,7 +74,7 @@
 	"prodsdbootargs=setenv bootargs rw rootwait earlycon root=/dev/mmcblk1p1 \0" \
 	"prodemmcbootargs=setenv bootargs rw rootwait earlycon root=/dev/mmcblk0p1 \0" \
 	"bootimage=unzip 0x4A080000 0x48080000; booti 0x40280000 - 0x40200000 \0" \
-	"emmcload=ext4load mmc 0:1 0x48080000 boot/Image;ext4load mmc 0:1 0x48000000 boot/rzg2ul-calixto-tiny.dtb;run prodemmcbootargs \0" \
+	"emmcload=ext4load mmc 0:1 0x40280000 boot/Image;ext4load mmc 0:1 0x40200000 boot/rzg2ul-calixto-tiny.dtb;run prodemmcbootargs \0" \
 	"sd1load=ext4load mmc 1:1 0x40280000 boot/Image;ext4load mmc 1:1 0x40200000 boot/rzg2ul-calixto-tiny.dtb;run prodsdbootargs \0" \
 	"bootcmd_check=if mmc dev 1; then run sd1load; else run emmcload; fi \0"
 
